@@ -3,7 +3,8 @@ package lesson_3;
 import java.util.Scanner;
 
 public class Calc {
-    static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         String calc = scan.nextLine();
@@ -19,7 +20,7 @@ public class Calc {
         } else if (calc.contains("/")) {
             String[] calcMass = calc.split(" ");
             System.out.println("Результат = " + div(calcMass));
-        } else {
+
             System.out.println("Такой операции нет");
         }
     }
@@ -33,6 +34,7 @@ public class Calc {
         }
         return sumNum;
     }
+
     public static int sub(String... arr) {
         int diffNum = Integer.parseInt(arr[0]);
         for (int i = 1; i < arr.length; i++) {
@@ -42,6 +44,7 @@ public class Calc {
         }
         return diffNum;
     }
+
     public static long mul(String... arr) {
         long prodNum = Integer.parseInt(arr[0]);
         for (int i = 1; i < arr.length; i++) {
@@ -51,6 +54,7 @@ public class Calc {
         }
         return prodNum;
     }
+
     public static float div(String... arr) {
         float divNum = Float.parseFloat(arr[0]);
         for (int i = 1; i < arr.length; i++) {
@@ -60,4 +64,7 @@ public class Calc {
         }
         return divNum;
     }
+
 }
+
+
