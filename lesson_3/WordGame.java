@@ -60,7 +60,6 @@ public class WordGame {
         scanner.close();
 
 
-
     }
 
 }

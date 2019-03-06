@@ -20,12 +20,13 @@ public class Calc {
         } else if (calc.contains("/")) {
             String[] calcMass = calc.split(" ");
             System.out.println("Результат = " + div(calcMass));
-
+        } else {
             System.out.println("Такой операции нет");
         }
     }
 
-    public static int add(String... arr) {
+
+    private static int add(String... arr) {
         int sumNum = Integer.parseInt(arr[0]);
         for (int i = 1; i < arr.length; i++) {
             if (!arr[i].equals("+")) {
@@ -35,7 +36,7 @@ public class Calc {
         return sumNum;
     }
 
-    public static int sub(String... arr) {
+    private static int sub(String... arr) {
         int diffNum = Integer.parseInt(arr[0]);
         for (int i = 1; i < arr.length; i++) {
             if (!arr[i].equals("-")) {
@@ -45,7 +46,7 @@ public class Calc {
         return diffNum;
     }
 
-    public static long mul(String... arr) {
+    private static long mul(String... arr) {
         long prodNum = Integer.parseInt(arr[0]);
         for (int i = 1; i < arr.length; i++) {
             if (!arr[i].equals("*")) {
@@ -55,7 +56,7 @@ public class Calc {
         return prodNum;
     }
 
-    public static float div(String... arr) {
+    private static float div(String... arr) {
         float divNum = Float.parseFloat(arr[0]);
         for (int i = 1; i < arr.length; i++) {
             if (!arr[i].equals("/")) {
