@@ -3,23 +3,61 @@ package lesson_3;
 import java.util.Scanner;
 
 public class Calc {
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
 
-    static private Scanner in = new Scanner(System.in);
-
-    private static void consoleCalc() {
-
-        String[] line = in.nextLine().split(" ");
-
-        switch (line[1]) {
-            case "+":
-                int count1 = Integer.parseInt(line[0]);
-                int count2 = Integer.parseInt(line[2]);
-                System.out.println(count1 + count2);
+        String calc = scan.nextLine();
+        if (calc.contains("+")) {
+            String[] calcMass = calc.split(" ");
+            System.out.println("Результат = " + add(calcMass));
+        } else if (calc.contains("-")) {
+            String[] calcMass = calc.split(" ");
+            System.out.println("Результат = " + sub(calcMass));
+        } else if (calc.contains("*")) {
+            String[] calcMass = calc.split(" ");
+            System.out.println("Результат = " + mul(calcMass));
+        } else if (calc.contains("/")) {
+            String[] calcMass = calc.split(" ");
+            System.out.println("Результат = " + div(calcMass));
+        } else {
+            System.out.println("Такой операции нет");
         }
-
     }
 
-    public static void main(String[] args) {
-        consoleCalc();
+    public static int add(String... arr) {
+        int sumNum = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            if (!arr[i].equals("+")) {
+                sumNum += Integer.parseInt(arr[i]);
+            }
+        }
+        return sumNum;
+    }
+    public static int sub(String... arr) {
+        int diffNum = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            if (!arr[i].equals("-")) {
+                diffNum -= Integer.parseInt(arr[i]);
+            }
+        }
+        return diffNum;
+    }
+    public static long mul(String... arr) {
+        long prodNum = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            if (!arr[i].equals("*")) {
+                prodNum *= Integer.parseInt(arr[i]);
+            }
+        }
+        return prodNum;
+    }
+    public static float div(String... arr) {
+        float divNum = Float.parseFloat(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            if (!arr[i].equals("/")) {
+                divNum /= Float.parseFloat(arr[i]);
+            }
+        }
+        return divNum;
     }
 }

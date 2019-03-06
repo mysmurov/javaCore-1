@@ -15,9 +15,11 @@ public class RandomGame {
 
         boolean nextGame = true;
 
+
         while (nextGame) {
             Random ran = new Random();
             Scanner scan = new Scanner(System.in);
+
             int ranNum = ran.nextInt(10);
 
             System.out.println("Попробуйте угадать число от 0 до 9. Есть 3 попытки.");
@@ -40,7 +42,8 @@ public class RandomGame {
 
             System.out.println("Сыграем еще? 1-ДА / 0-НЕТ");
             nextGame = scan.nextInt() == 1;
-
         }
+
     }
 }
+

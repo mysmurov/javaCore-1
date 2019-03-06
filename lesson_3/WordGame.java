@@ -57,6 +57,7 @@ public class WordGame {
         }
 
         System.out.println("Ура! Ты выиграл!!!");
+        scanner.close();
 
 
 
