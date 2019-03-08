@@ -1,8 +1,9 @@
 package lesson_3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Calc {
+public class Calc_1 {
     private static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -25,6 +26,21 @@ public class Calc {
         }
     }
 
+    private static int readString(){
+
+        while(true){
+            try{
+                return scan.nextInt();
+            } catch (InputMismatchException e){
+                scan.next();
+                System.out.println("Это вообще не число, соберитесь.");
+            }
+
+
+        }
+
+
+    }
 
     private static int add(String... arr) {
         int sumNum = Integer.parseInt(arr[0]);
