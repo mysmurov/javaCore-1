@@ -28,7 +28,6 @@ public class Calc {
         }
     }
 
-
     private static int add(String... arr) {
         int sumNum = 0;
         try {
@@ -47,56 +46,54 @@ public class Calc {
         return sumNum;
     }
 
+    private static int sub(String... arr) {
+        int diffNum = 0;
+        try {
+            diffNum = Integer.parseInt(arr[0]);
+            for (int i = 1; i < arr.length; i++) {
+                if (!arr[i].equals("-")) {
+                    diffNum -= Integer.parseInt(arr[i]);
+                }
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка в выражении");
+            System.exit(-1);
 
-
-
-        private static int sub (String...arr){
-                    int diffNum = 0;
-                    try {
-                        diffNum = Integer.parseInt(arr[0]);
-                        for (int i = 1; i < arr.length; i++) {
-                            if (!arr[i].equals("-")) {
-                                diffNum -= Integer.parseInt(arr[i]);
-                            }
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Ошибка в выражении");
-                        System.exit(-1);
-
-                    }
-            return diffNum;
         }
+        return diffNum;
+    }
 
-        private static long mul (String...arr){
-            long prodNum = 0;
-            try{
+    private static long mul(String... arr) {
+        long prodNum = 0;
+        try {
             prodNum = Integer.parseInt(arr[0]);
             for (int i = 1; i < arr.length; i++) {
                 if (!arr[i].equals("*")) {
-                    prodNum *= Integer.parseInt(arr[i]);}
+                    prodNum *= Integer.parseInt(arr[i]);
+                }
             }
         } catch (NumberFormatException e) {
-        System.out.println("Ошибка в выражении");
-        System.exit(-1);
+            System.out.println("Ошибка в выражении");
+            System.exit(-1);
 
-    }
-            return (int) prodNum;
         }
+        return (int) prodNum;
+    }
 
-        private static float div (String...arr){
-            float divNum = 0;
-            try{
+    private static float div(String... arr) {
+        float divNum = 0;
+        try {
             divNum = Float.parseFloat(arr[0]);
             for (int i = 1; i < arr.length; i++) {
                 if (!arr[i].equals("/")) {
-                    divNum /= Float.parseFloat(arr[i]);}
+                    divNum /= Float.parseFloat(arr[i]);
+                }
             }
         } catch (NumberFormatException e) {
-        System.out.println("Ошибка в выражении");
-        System.exit(-1);
+            System.out.println("Ошибка в выражении");
+            System.exit(-1);
 
         }
-            return (int) divNum;
-        }
-
+        return (int) divNum;
     }
+}
