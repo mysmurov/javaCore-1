@@ -47,4 +47,3 @@ public class RandomGame {
     }
 }
 
-//проверка синхронизации с  git/удалить
