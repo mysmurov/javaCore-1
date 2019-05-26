@@ -14,7 +14,7 @@ public class Palindrome {
     }
     public static boolean isPalindrome(String text) {
         String a = text.replaceAll("[^a-zA-Z0-9]", "");
-        String b = new StringBuffer(a).reverse().toString();
+        String b = new StringBuilder(a).reverse().toString();
 
         return a.equalsIgnoreCase(b);
 
