@@ -77,9 +77,8 @@ public class TextPerRole {
                 "Аммос Федорович: Вот те на!",
                 "Артемий Филиппович: Вот не было заботы, так подай!",
                 "Лука Лукич: Господи боже! еще и с секретным предписаньем!"};
-        String s = printTextPerRole(roles,textLines);
 
-        System.out.println(s);
+        System.out.println(printTextPerRole(roles,textLines));
     }
     private static String printTextPerRole(String[] roles, String[] textLines) {
         StringBuilder printTextPerRole = new StringBuilder();
