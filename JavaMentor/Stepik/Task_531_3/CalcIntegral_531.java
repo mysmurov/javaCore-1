@@ -2,7 +2,7 @@ package JavaMentor.Stepik.Task_531_3;
 
 import java.util.function.DoubleUnaryOperator;
 
-public class CalcIntegral {
+public class CalcIntegral_531 {
 
 //метод левых прямоугольников
 
